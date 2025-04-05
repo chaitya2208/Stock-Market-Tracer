@@ -108,9 +108,9 @@ npm start
 
 ## 👤 Author
 
-**Chaitya Patel**  
-🚀 130+ LeetCode problems | 🥇 ACPC Gujarat Rank 132 | 🎓 Nirma University Scholar  
-🔗 [LinkedIn](https://linkedin.com/in/chaitya2208)
+**Chaitya Shah**  
+🚀 130+ LeetCode problems | 🥇 ACPC Gujarat Rank 135 | 🎓 Nirma University Scholar  
+🔗 [LinkedIn](https://www.linkedin.com/in/chaitya-shah-658984285/)
 
 ---
 
