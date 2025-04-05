@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+📈 Stock Market Tracer
+Stock Market Tracer is a full-stack stock market analysis and portfolio tracking application. It allows users to track real-time stock data, manage their investments, and access stock insights using a dynamic web dashboard and a browser extension. It also includes OTP-based email verification and Sign in with Google for secure and smooth authentication.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🔗 GitHub Repository
 
-## Available Scripts
+🌟 Features
+🔐 Secure User Authentication
 
-In the project directory, you can run:
+Email & Password Sign-up/Login with OTP verification
 
-### `npm start`
+Google Sign-In with OAuth 2.0
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📊 Real-time Stock Data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fetches live data for multiple stock symbols using the Alpha Vantage API
 
-### `npm test`
+Displays current price, percentage change, highs/lows, and trends
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📁 Portfolio Management
 
-### `npm run build`
+Personalized dashboard with tracked stock symbols
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dynamic display of real-time stock updates
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💡 Browser Extension
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A lightweight extension to view stock information directly in the browser
 
-### `npm run eject`
+🗂️ Project Structure
+graphql
+Copy
+Edit
+Stock-Market-Tracer/
+├── frontEnd/           # React app for frontend (user dashboard, login/signup)
+├── backEnd/            # Node.js + Express + MongoDB backend with API & auth
+├── browserExtension/   # Chrome Extension for quick stock lookup
+├── docs/               # Documentation and assets
+🛠️ Technologies Used
+Frontend (React)
+React.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Axios
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tailwind CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Google Identity Services SDK
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React Router
 
-## Learn More
+Context API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Backend (Node.js)
+Express.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MongoDB with Mongoose
 
-### Code Splitting
+dotenv
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+nodemailer (for OTP email)
 
-### Analyzing the Bundle Size
+Google OAuth 2.0 (for Google Sign-In)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+APIs
+Alpha Vantage API (Stock data)
 
-### Making a Progressive Web App
+Other Tools
+Git & GitHub for version control
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Chrome Extension (Manifest V3)
 
-### Advanced Configuration
+Postman (for API testing)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🧪 Key Functionalities
+🔐 Authentication
+Signup with Email & Password
 
-### Deployment
+Generates a 6-digit OTP and sends via email using NodeMailer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+User can only log in after successful OTP verification
 
-### `npm run build` fails to minify
+Login with Email & Password
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Validates credentials with the MongoDB database
+
+Google Sign-In
+
+Integrated via Google Identity Services (OAuth 2.0)
+
+Secure token-based authentication
+
+Automatically registers user on first sign-in
+
+📈 Stock Dashboard
+Fetches real-time stock data from Alpha Vantage API
+
+Displays:
+
+Stock name and symbol
+
+Current price
+
+Percentage gain/loss (green/red indicators)
+
+Automatically maps and displays data for all supported stock symbols
+
+🧩 Browser Extension
+Injects a floating React widget on click
+
+Displays:
+
+Stock price
+
+% high/low
+
+Additional insights (extendable)
+
+🚀 Getting Started
+1️⃣ Clone the Repo
+bash
+Copy
+Edit
+git clone https://github.com/chaitya2208/Stock-Market-Tracer.git
+cd Stock-Market-Tracer
+2️⃣ Backend Setup
+bash
+Copy
+Edit
+cd backEnd
+npm install
+Create a .env file with:
+
+env
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+ALPHA_VANTAGE_API_KEY=your_api_key
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
+GOOGLE_CLIENT_ID=your_google_client_id
+bash
+Copy
+Edit
+npm start
+Runs on: http://localhost:5000
+
+3️⃣ Frontend Setup
+bash
+Copy
+Edit
+cd ../frontEnd
+npm install
+npm start
+Runs on: http://localhost:3000
+
+4️⃣ Browser Extension
+To install:
+
+Go to chrome://extensions
+
+Enable "Developer Mode"
+
+Click "Load Unpacked"
+
+Select the browserExtension/ folder
+
+📧 Email OTP Flow
+User signs up with email and password
+
+Server generates a 6-digit OTP
+
+Email sent using NodeMailer
+
+User must enter OTP to complete verification
+
+Upon success, account is activated
+
+🔐 Google Sign-In Flow
+User clicks "Sign in with Google"
+
+Google OAuth 2.0 handles authentication
+
+Token is verified server-side
+
+If user doesn’t exist, they’re registered
+
+User is redirected to dashboard
+
+🤝 Contributing
+Feel free to fork the repository and contribute!
+
+bash
+Copy
+Edit
+git checkout -b feature/myFeature
+git commit -m "Added myFeature"
+git push origin feature/myFeature
+Then create a pull request. Let’s build together!
+
+📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
