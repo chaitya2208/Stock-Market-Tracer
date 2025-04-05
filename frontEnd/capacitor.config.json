@@ -1,0 +1,10 @@
+{
+  "appId": "com.chaitya.stocktracker",
+  "appName": "npx cap sync androidnpx cap open android",
+  "webDir": "build",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "http://localhost:3000/signup",
+    "cleartext": true
+  }
+}

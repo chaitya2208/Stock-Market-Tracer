@@ -1,0 +1,104 @@
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    width: 100vw;
+  }
+  
+  .portfolio-section {
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    border: none;
+    padding: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .scroll-btn {
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .scroll-btn:hover {
+    background: #0056b3;
+  }
+  
+  .stock-info {
+    margin-top: 20px;
+    width: 100vw;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .card-value {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .stock-percentage {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .stock-percentage.positive {
+    color: green;
+  }
+  
+  .stock-percentage.negative {
+    color: red;
+  }
+  
+  .chart-placeholder {
+    height: 250px;
+    background-color: #eef1f6;
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
